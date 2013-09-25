@@ -1,6 +1,8 @@
 #ifndef PN_COMMON_H
 #define PN_COMMON_H
 
+#include "pnconst.h"
+
 /* Platform,you can only use one of them */
 
 #define PN_LINUX

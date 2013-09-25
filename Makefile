@@ -1,11 +1,18 @@
 
 # plateform, use one of them #
 # include "arm.mk"
-# include x86.mk
+include x86.mk
 # plateform end #
 
-pnnet:
-	$(MAKE) -C net
+default: 
+	@echo use make [target] to build target.
+	@echo [target] can be one of bellow.
+	@echo [pnnet], network libs.
 
-clean:
-	$(MAKE) -C net
+pnnet:
+	@$(MAKE) -C net
+
+pnnet_clean:
+	cd net && make clean
+
+clean: pnnet_clean

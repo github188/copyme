@@ -57,18 +57,18 @@ void err_quit(const char* fmt, ...)
 static void err_doit( int errnoflag, int level, const char* fmt, va_list ap)
 {
 	int errno_save, n;
-	char buf[MAXLINNE + 1];
+	char buf[LEN_MAXLINNE+ 1];
 
 	errno_save = errno;
 #ifdef HAVE_VSNPRINTF
-	vsnprintf(buf, MAXLINNE, fmt, ap);
+	vsnprintf(buf, LEN_MAXLINNE, fmt, ap);
 #else
 	vsprintf(buf, fmt, ap);
 #endif
 
 	n = strlen(buf);
 	if(errnoflag)
-	  snprintf( buf+n, MAXLINNE-n, ": %s", strerror(errno_save) );
+	  snprintf( buf + n, LEN_MAXLINNE - n, ": %s", strerror(errno_save) );
 	strcat(buf, "\n");
 
 	if(daemon_proc)

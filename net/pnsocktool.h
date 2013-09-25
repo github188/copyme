@@ -1,6 +1,7 @@
 
-#ifndef PN_SOCK_TOOL
-#define PN_SOCK_TOOL
+#ifndef PN_SOCK_TOOL_H
+#define PN_SOCK_TOOL_H
+
 #include<sys/types.h>
 
 /* Get host's byte order
@@ -25,4 +26,4 @@ typedef void Sigfunc(int);
 Sigfunc *PNSignal(int signo, Sigfunc *func);
 
 
-#endif // PN_SOCK_TOOL
+#endif // PN_SOCK_TOOL_H
