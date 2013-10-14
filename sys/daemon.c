@@ -3,7 +3,7 @@
 extern int daemon_proc;
 
 #define MAXFD 64
-
+/* 让调用该函数的进程变成守护进程运行 */
 int daemon_init(const char *pname, int facility)
 {
 	int i;
