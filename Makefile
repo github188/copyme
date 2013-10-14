@@ -1,7 +1,7 @@
 
 # plateform, use one of them #
-# include "arm.mk"
-include x86.mk
+include arm.mk
+#include x86.mk
 # plateform end #
 
 default: 
@@ -11,6 +11,9 @@ default:
 
 pnnet:
 	@$(MAKE) -C net
+
+pnfile:
+	@$(MAKE) -C file
 
 pnnet_clean:
 	cd net && make clean

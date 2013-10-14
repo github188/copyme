@@ -66,7 +66,7 @@ int main()
 {
 	const char* ptr = NULL;
 	size_t size = 0;
-	size = GetDataFromFile("/home/peon/Workspace/pnlib/pnFile.c", 
+	size = GetDataFromFile("pnFile.c", 
 				&ptr);
 	if(0 < size)
 	{

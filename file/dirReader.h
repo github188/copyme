@@ -1,7 +1,7 @@
 #ifndef DIR_READER_H
 #define DIR_READER_H
 
-#include"pnCommon.h"
+#include<pncommon.h>
 
 /* [Platform]: PN_LINUX */
 #ifdef PN_LINUX
