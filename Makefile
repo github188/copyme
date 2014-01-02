@@ -17,5 +17,6 @@ pnfile:
 
 pnnet_clean:
 	cd net && make clean
+	cd file && make clean
 
 clean: pnnet_clean
